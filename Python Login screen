@@ -1,0 +1,89 @@
+
+from tkinter import *
+import time 
+
+bilgiler = ("uhutylm", "123")
+denemeHakki = 3
+zaman = (0)
+
+        
+def girisYap() :
+    global denemeHakki
+    
+    if denemeHakki <= 0:
+        if time.time() - zaman >= 5:
+            denemeHakki = 3
+        else:
+            return False
+             
+    
+    kadı = isim.get()
+    parola = şifre.get()
+    print(kadı, parola)
+    print("Kontrol ediliyor..")
+    if kadı == bilgiler[0] and parola[1]:
+        print("Bilgiler doğru")
+        sonuc.config(text = "Giriş başarılı")
+        ekraniTemizle()
+    else:
+        print("Bilgiler yanlış")
+        denemeHakki -= 1
+        if denemeHakki == 0.:
+            zaman = time.time() 
+        sonuc.config(text = "Bilgiler yanlış kalan deneme hakı: %d" %denemeHakki)
+        
+    
+def ekraniTemizle():
+    uhutyaz.config(text = "Uhut Yazılım com",fg="red")
+    karşılama.destroy()
+    isimsor.destroy()
+    isim.destroy()
+    şifresor.destroy()
+    şifre.destroy()
+    buton.destroy()
+    buton2.destroy()
+    
+    
+        
+
+pencere = Tk()
+pencere.title("Uhut YAZILIM / Giriş Yap")
+pencere.geometry("600x200+100+100")
+
+
+karşılama = Label(pencere)
+karşılama.config(text = "GİRİŞ YAPIN")
+karşılama.pack()
+
+isimsor = Label(pencere)
+isimsor.config(text = "Kullanıcı Adı : ")
+isimsor.pack()
+
+isim = Entry(pencere)
+isim.pack()
+
+şifresor = Label(pencere)
+şifresor.config(text = "Şifre : ")
+şifresor.pack()
+
+şifre = Entry(pencere)
+şifre.pack()
+
+buton = Button(pencere)
+buton.config(text = "Giriş Yap",command=girisYap)
+buton.pack()
+
+buton2 = Button(pencere)
+buton2.config(text = "Hesap Oluştur")
+buton2.pack()
+
+sonuc = Label(pencere)
+sonuc.config(text = "Giriş yapın")
+sonuc.pack()
+
+
+uhutyaz = Label(pencere)
+uhutyaz.config(text = "Uhut Yazılım com",fg="red")
+uhutyaz.pack()
+
+mainloop()
