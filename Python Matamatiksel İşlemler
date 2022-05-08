@@ -1,0 +1,39 @@
+#pythonda yeni başlayanlar için toplama örneği 1
+
+
+#x=1
+#y=1
+
+#toplam= x + y
+
+#print(toplam)
+
+
+#pythonda yeni başlayanlar için çıkartma örneği 
+
+#x=967
+#y=342
+
+#sonuc=x - y 
+
+#print(sonuc)
+
+#pythonda yeni başlayanlar için bölme örneği 
+
+#x=12
+#y=3
+
+#sonuc= x / y 
+
+#print(sonuc)
+
+
+#pythonda yeni başlayanlar için çarpma örneği 
+
+
+#x=6
+#y=3
+
+#sonuc= x * y 
+
+#print(sonuc)
