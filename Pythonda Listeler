@@ -1,0 +1,7 @@
+list = ['Ad', 'Soyadı', 'Yaş', 'Şehir']
+
+print(list) #Terminal = ['Ad', 'Soyadı', 'Yaş', 'Şehir']
+print(list[0]) #Terminal = Ad
+print(list[1]) #Terminal Soyadı 
+print(list[-1]) #Terminal = Şehir 
+print(list[-3]) #Terminal = Soyadı 
